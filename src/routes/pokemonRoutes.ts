@@ -12,7 +12,7 @@ const router = express.Router();
 
 router.post('/', upload.single('image'), validatePokemon, addPokemon);
 router.get('/', getAllPokemon);
-router.put('/:id', upload.single('image'), updatePokemon);
+router.patch('/:id', upload.single('image'), updatePokemon);
 router.delete('/:id', deletePokemon);
 
 export default router;
